@@ -60,6 +60,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		test.runsettings = test.runsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenSleigh.Transport.InMemory", "src\OpenSleigh.Transport.InMemory\OpenSleigh.Transport.InMemory.csproj", "{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -162,6 +164,10 @@ Global
 		{5D55ADA4-06CD-4311-99D7-A8221251B031}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D55ADA4-06CD-4311-99D7-A8221251B031}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D55ADA4-06CD-4311-99D7-A8221251B031}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -187,6 +193,7 @@ Global
 		{56C15EFB-B1DD-45DC-B064-E562C7843FFB} = {5594CC89-F905-46B2-B938-27B8050D9CA3}
 		{A3E8A482-89F7-45BA-B4F0-E2EBFA020FFE} = {5594CC89-F905-46B2-B938-27B8050D9CA3}
 		{54D55A70-20E1-4480-BECB-16E3937D97D7} = {5594CC89-F905-46B2-B938-27B8050D9CA3}
+		{CA381B93-7B81-44E1-9395-7ADD1FEA5DAF} = {86CDC8FD-5E6F-4F45-A073-9F2749192582}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D5297242-16B4-43D7-B329-362EBCE2A5A5}

@@ -8,12 +8,12 @@ using OpenSleigh.Core.Exceptions;
 using OpenSleigh.Core.Messaging;
 using OpenSleigh.Core.Persistence;
 
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Persistence.InMemory
 {
     public class InMemoryOutboxRepository : IOutboxRepository
     {
         private readonly ConcurrentDictionary<Guid, (IMessage message, Guid? lockId, bool processed)> _messages = new();
-        
+
         public Task<IEnumerable<IMessage>> ReadMessagesToProcess(CancellationToken cancellationToken = default) =>
             Task.FromResult(_messages.Values.Where(m => m.lockId == null && !m.processed)
                 .Select(m => m.message));
@@ -23,15 +23,15 @@ namespace OpenSleigh.Persistence.InMemory.Messaging
             if (message == null)
                 throw new ArgumentNullException(nameof(message));
 
-            if(!_messages.TryUpdate(message.Id, (message, null, true), (message, lockId, false)))
+            if (!_messages.TryUpdate(message.Id, (message, null, true), (message, lockId, false)))
                 throw new ArgumentException($"message '{message.Id}' not found. Maybe it was already processed?");
-            
+
             return Task.CompletedTask;
         }
 
         public Task AppendAsync(IMessage message, CancellationToken cancellationToken = default)
         {
-            if (message == null) 
+            if (message == null)
                 throw new ArgumentNullException(nameof(message));
             _messages.TryAdd(message.Id, (message, null, false));
             return Task.CompletedTask;
@@ -50,9 +50,9 @@ namespace OpenSleigh.Persistence.InMemory.Messaging
         {
             if (message == null)
                 throw new ArgumentNullException(nameof(message));
-            
+
             var lockId = Guid.NewGuid();
-            if(!_messages.TryUpdate(message.Id, (message, lockId, false), (message, null, false)))
+            if (!_messages.TryUpdate(message.Id, (message, lockId, false), (message, null, false)))
                 throw new LockException($"message '{message.Id}' is already locked");
             return Task.FromResult(lockId);
         }

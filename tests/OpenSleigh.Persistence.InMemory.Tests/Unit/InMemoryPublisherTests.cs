@@ -4,7 +4,7 @@ using System.Threading.Channels;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
-using OpenSleigh.Persistence.InMemory.Messaging;
+using OpenSleigh.Transport.InMemory;
 using Xunit;
 
 namespace OpenSleigh.Persistence.InMemory.Tests.Unit

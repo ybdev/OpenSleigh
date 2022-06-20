@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Channels;
@@ -8,7 +7,7 @@ using FluentAssertions;
 using Microsoft.Extensions.Logging;
 using NSubstitute;
 using OpenSleigh.Core.Messaging;
-using OpenSleigh.Persistence.InMemory.Messaging;
+using OpenSleigh.Transport.InMemory;
 using Xunit;
 
 namespace OpenSleigh.Persistence.InMemory.Tests.Unit

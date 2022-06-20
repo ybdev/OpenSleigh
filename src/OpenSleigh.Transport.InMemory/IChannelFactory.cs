@@ -3,7 +3,7 @@ using System.Threading.Channels;
 using OpenSleigh.Core.Messaging;
 
 [assembly: InternalsVisibleTo("OpenSleigh.Persistence.InMemory.Tests")]
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Transport.InMemory
 {
     public interface IChannelFactory
     {

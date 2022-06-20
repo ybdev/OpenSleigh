@@ -1,9 +1,8 @@
-﻿using System;
-using System.Threading.Channels;
+﻿using System.Threading.Channels;
 using Microsoft.Extensions.DependencyInjection;
 using OpenSleigh.Core.Messaging;
 
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Transport.InMemory
 {
     internal class ChannelFactory : IChannelFactory
     {

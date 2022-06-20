@@ -2,7 +2,7 @@
 using System.Threading.Channels;
 using FluentAssertions;
 using NSubstitute;
-using OpenSleigh.Persistence.InMemory.Messaging;
+using OpenSleigh.Transport.InMemory;
 using Xunit;
 
 namespace OpenSleigh.Persistence.InMemory.Tests.Unit

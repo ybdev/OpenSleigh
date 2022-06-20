@@ -3,11 +3,11 @@ using OpenSleigh.Core;
 using OpenSleigh.Core.DependencyInjection;
 using OpenSleigh.Core.Messaging;
 using OpenSleigh.Core.Utils;
-using OpenSleigh.Persistence.InMemory.Messaging;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Channels;
+using OpenSleigh.Transport.InMemory;
 
 namespace OpenSleigh.Persistence.InMemory
 {

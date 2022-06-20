@@ -1,10 +1,7 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using OpenSleigh.Core.Messaging;
 
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Transport.InMemory
 {
     public class InMemoryPublisher : IPublisher 
     {

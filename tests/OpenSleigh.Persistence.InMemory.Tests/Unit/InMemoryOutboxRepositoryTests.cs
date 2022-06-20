@@ -2,7 +2,6 @@
 using System.Threading.Tasks;
 using FluentAssertions;
 using OpenSleigh.Core.Exceptions;
-using OpenSleigh.Persistence.InMemory.Messaging;
 using Xunit;
 
 namespace OpenSleigh.Persistence.InMemory.Tests.Unit

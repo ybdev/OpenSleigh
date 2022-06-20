@@ -1,12 +1,8 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using System.Threading.Channels;
+using Microsoft.Extensions.Logging;
 using OpenSleigh.Core.Messaging;
-using System;
-using System.Linq;
-using System.Threading;
-using System.Threading.Channels;
-using System.Threading.Tasks;
 
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Transport.InMemory
 {
     public record InMemorySubscriberOptions
     {

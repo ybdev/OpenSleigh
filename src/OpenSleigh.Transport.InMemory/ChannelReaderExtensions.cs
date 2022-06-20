@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using System.Threading.Channels;
 
-namespace OpenSleigh.Persistence.InMemory.Messaging
+namespace OpenSleigh.Transport.InMemory
 {
     public static class ChannelReaderExtensions
     {
